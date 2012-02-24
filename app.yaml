@@ -1,0 +1,26 @@
+# application info {{{
+application: queue-issue
+version: 1
+runtime: python
+api_version: 1
+# }}}
+
+# handlers {{{
+handlers:
+
+# apis {{{
+- url: /(enqueue_tasks|run_task)/
+  script: apis/queue_issue.py
+  login: admin
+# }}}
+
+# }}}
+
+# Skip Files {{{
+skip_files:
+- ^non_gae_indicator
+- ^google_appengine
+- .*README$
+# }}}
+
+# vim:fdm=marker:fmr={{{,}}}:

@@ -1,0 +1,10 @@
+nnoremap <buffer> <silent> <s-e> :w<CR>:!sudo ./gae-server.sh<CR>
+
+if b:current_syntax == "python"
+    nnoremap <buffer> <silent> <s-c> :w<CR>:!PYTHONPATH="google_appengine/lib/django_1_2/:google_appengine/:google_appengine/lib/webob/:google_appengine/lib/yaml/lib/:." pychecker --limit=30 %<CR>
+endif
+
+set foldmethod=marker
+set foldmarker={{{,}}}
+
+" vim:ft=vim:

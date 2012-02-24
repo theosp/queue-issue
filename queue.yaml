@@ -1,0 +1,6 @@
+queue:
+- name: files-processor
+  target: queue-issue
+  rate: 100/s
+  bucket_size: 100
+  max_concurrent_requests: 1
